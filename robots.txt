@@ -1,0 +1,13 @@
+# === STAGING (aktuell) =========================================
+# Die Seite ist erreichbar, wird aber komplett von Suchmaschinen
+# ausgeschlossen, damit sie nicht mit der Jimdo-Seite konkurriert.
+User-agent: *
+Disallow: /
+
+# === LAUNCH ====================================================
+# Zum echten Veröffentlichen die drei Zeilen oben löschen und die
+# folgenden drei aktivieren (führende "# " entfernen):
+#
+# User-agent: *
+# Allow: /
+# Sitemap: https://groschenopa.github.io/kasper/sitemap.xml

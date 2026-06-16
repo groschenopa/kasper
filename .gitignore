@@ -1,0 +1,11 @@
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# temporäre Hilfsdateien
+_montage.jpg
+_shot-*.png
+
+# lokale Claude-Code-Konfiguration
+.claude/

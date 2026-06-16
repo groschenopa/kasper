@@ -1,0 +1,146 @@
+[
+  {
+    "id": "galerie-01",
+    "full": "assets/galerie/galerie-01",
+    "thumb": "assets/galerie/galerie-01-thumb",
+    "alt": "Zwei Charakterpuppen – ein alter Mann mit weißem Haar und eine Hexe mit buntem Kopftuch.",
+    "hero": true,
+    "w": 1050,
+    "h": 1400
+  },
+  {
+    "id": "galerie-02",
+    "full": "assets/galerie/galerie-02",
+    "thumb": "assets/galerie/galerie-02-thumb",
+    "alt": "Der alte Mann und die wild gelockte Hexe im Gespräch.",
+    "hero": false,
+    "w": 1400,
+    "h": 1050
+  },
+  {
+    "id": "galerie-03",
+    "full": "assets/galerie/galerie-03",
+    "thumb": "assets/galerie/galerie-03-thumb",
+    "alt": "Engelsfigur in weißem Gewand mit ausgebreiteten Armen.",
+    "hero": false,
+    "w": 960,
+    "h": 1280
+  },
+  {
+    "id": "galerie-04",
+    "full": "assets/galerie/galerie-04",
+    "thumb": "assets/galerie/galerie-04-thumb",
+    "alt": "Ein weißes Gespenst und ein Mann in brauner Kleidung.",
+    "hero": false,
+    "w": 1400,
+    "h": 1050
+  },
+  {
+    "id": "galerie-05",
+    "full": "assets/galerie/galerie-05",
+    "thumb": "assets/galerie/galerie-05-thumb",
+    "alt": "Weiße Märchenfigur mit Spitzhut.",
+    "hero": false,
+    "w": 853,
+    "h": 1280
+  },
+  {
+    "id": "galerie-06",
+    "full": "assets/galerie/galerie-06",
+    "thumb": "assets/galerie/galerie-06-thumb",
+    "alt": "Mädchenpuppe im weißen Kleid vor herbstlicher Bühnenkulisse.",
+    "hero": false,
+    "w": 960,
+    "h": 1280
+  },
+  {
+    "id": "galerie-07",
+    "full": "assets/galerie/galerie-07",
+    "thumb": "assets/galerie/galerie-07-thumb",
+    "alt": "Der alte Mann und die Hexe stehen sich gegenüber.",
+    "hero": false,
+    "w": 1400,
+    "h": 1050
+  },
+  {
+    "id": "galerie-08",
+    "full": "assets/galerie/galerie-08",
+    "thumb": "assets/galerie/galerie-08-thumb",
+    "alt": "Zwei Handpuppen – ein Kapitän mit Mütze und ein Mann mit Hut.",
+    "hero": false,
+    "w": 853,
+    "h": 1280
+  },
+  {
+    "id": "galerie-09",
+    "full": "assets/galerie/galerie-09",
+    "thumb": "assets/galerie/galerie-09-thumb",
+    "alt": "Freundliche Hexe mit lila Spitzhut und buntem Flickenkleid.",
+    "hero": true,
+    "w": 960,
+    "h": 1280
+  },
+  {
+    "id": "galerie-10",
+    "full": "assets/galerie/galerie-10",
+    "thumb": "assets/galerie/galerie-10-thumb",
+    "alt": "Prinzessin mit grünem Spitzhut und lila Kleid.",
+    "hero": true,
+    "w": 960,
+    "h": 1280
+  },
+  {
+    "id": "galerie-11",
+    "full": "assets/galerie/galerie-11",
+    "thumb": "assets/galerie/galerie-11-thumb",
+    "alt": "Zauberer mit schwarzem Spitzhut und rotem Umhang.",
+    "hero": true,
+    "w": 960,
+    "h": 1280
+  },
+  {
+    "id": "galerie-12",
+    "full": "assets/galerie/galerie-12",
+    "thumb": "assets/galerie/galerie-12-thumb",
+    "alt": "Zauberer mit Zauberstab und leuchtender Kristallkugel.",
+    "hero": true,
+    "w": 853,
+    "h": 1280
+  },
+  {
+    "id": "galerie-13",
+    "full": "assets/galerie/galerie-13",
+    "thumb": "assets/galerie/galerie-13-thumb",
+    "alt": "Prinzessin und Kasperle mit einer lachenden Blume.",
+    "hero": true,
+    "w": 946,
+    "h": 1280
+  },
+  {
+    "id": "galerie-14",
+    "full": "assets/galerie/galerie-14",
+    "thumb": "assets/galerie/galerie-14-thumb",
+    "alt": "Kasperle-Junge in roter Kleidung.",
+    "hero": false,
+    "w": 853,
+    "h": 1280
+  },
+  {
+    "id": "galerie-15",
+    "full": "assets/galerie/galerie-15",
+    "thumb": "assets/galerie/galerie-15-thumb",
+    "alt": "Ein Mädchen im roten Kleid und eine Großmutter.",
+    "hero": false,
+    "w": 1362,
+    "h": 1199
+  },
+  {
+    "id": "galerie-16",
+    "full": "assets/galerie/galerie-16",
+    "thumb": "assets/galerie/galerie-16-thumb",
+    "alt": "Puppe im Trachtenkleid auf der Theaterbühne.",
+    "hero": false,
+    "w": 880,
+    "h": 1280
+  }
+]
