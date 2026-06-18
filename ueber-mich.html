@@ -15,13 +15,16 @@
   <header class="site-header">
     <nav class="nav container" aria-label="Hauptnavigation">
       <a class="brand" href="index.html"><span class="sparkle" aria-hidden="true">✨</span>Luxis Puppentheater</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen"><span></span></button>
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="index.html">Start</a></li>
-        <li><a href="anlaesse.html">Anlässe</a></li>
-        <li><a href="ueber-mich.html" aria-current="page">Über mich</a></li>
-        <li><a href="gaestebuch.html">Gästebuch</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="anlaesse.html">Anlässe</a></li>
+          <li><a href="ueber-mich.html" aria-current="page">Über mich</a></li>
+          <li><a href="gaestebuch.html">Gästebuch</a></li>
+        </ul>
+        <a class="btn btn-primary btn-sm header-cta" href="index.html#kontakt">Anfragen</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen"><span></span></button>
+      </div>
     </nav>
   </header>
 
@@ -42,7 +45,9 @@
             </div>
             <picture>
               <source srcset="assets/bilder/ueber-mich.webp" type="image/webp">
-              <img src="assets/bilder/ueber-mich.jpg" alt="Zauberer-Puppe mit Zauberstab und leuchtender Kristallkugel.">
+              <img src="assets/bilder/ueber-mich.jpg" width="733" height="1100"
+                   decoding="async" fetchpriority="high"
+                   alt="Zauberer-Puppe mit Zauberstab und leuchtender Kristallkugel.">
             </picture>
           </div>
         </div>
@@ -51,9 +56,9 @@
           <h2>Anfragen beantworte ich hier</h2>
           <ul class="kontakt-daten">
             <li><strong>Birgit Lux</strong></li>
-            <li>📍 59558 Lippstadt</li>
-            <li>📧 <a href="mailto:birgit.lux@gmx.de">birgit.lux@gmx.de</a></li>
-            <li>📞 <a href="tel:+49294180397">02941 / 80397</a></li>
+            <li><span aria-hidden="true">📍</span> 59558 Lippstadt</li>
+            <li><span aria-hidden="true">📧</span> <span class="visually-hidden">E-Mail: </span><a href="mailto:birgit.lux@gmx.de">birgit.lux@gmx.de</a></li>
+            <li><span aria-hidden="true">📞</span> <span class="visually-hidden">Telefon: </span><a href="tel:+49294180397">02941 / 80397</a></li>
           </ul>
         </div>
       </section>

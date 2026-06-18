@@ -37,16 +37,24 @@
     function close() {
       menu.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Menü öffnen");
     }
     toggle.addEventListener("click", function () {
       const open = menu.classList.toggle("open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
     });
     menu.addEventListener("click", function (e) {
       if (e.target.closest("a")) close();
     });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") close();
+    });
+    /* Klick/Tipp außerhalb von Menü und Button schließt das Menü */
+    document.addEventListener("click", function (e) {
+      if (!menu.classList.contains("open")) return;
+      if (e.target.closest("#nav-menu") || e.target.closest(".nav-toggle")) return;
+      close();
     });
   }
 
@@ -67,6 +75,7 @@
     list.forEach(function (img, idx) {
       const slide = document.createElement("div");
       slide.className = "hero-slide" + (idx === 0 ? " active" : "");
+      slide.setAttribute("aria-hidden", idx === 0 ? "false" : "true");
       slide.innerHTML = pictureHTML(img.full, img.alt, null);
       track.appendChild(slide);
 
@@ -89,9 +98,11 @@
 
     function go(i) {
       slides[current].classList.remove("active");
+      slides[current].setAttribute("aria-hidden", "true");
       if (dots[current]) dots[current].removeAttribute("aria-current");
       current = (i + list.length) % list.length;
       slides[current].classList.add("active");
+      slides[current].setAttribute("aria-hidden", "false");
       if (dots[current]) dots[current].setAttribute("aria-current", "true");
     }
     function next() { go(current + 1); }
@@ -138,11 +149,13 @@
       '<button class="lb-close" aria-label="Schließen">×</button>' +
       '<button class="lb-nav lb-prev" aria-label="Vorheriges Bild">‹</button>' +
       '<button class="lb-nav lb-next" aria-label="Nächstes Bild">›</button>' +
-      '<figure><img alt=""><figcaption></figcaption></figure>';
+      '<figure><img alt=""><figcaption aria-hidden="true"></figcaption></figure>' +
+      '<p class="visually-hidden" aria-live="polite"></p>';
     document.body.appendChild(lb);
 
     const lbImg = lb.querySelector("img");
     const lbCap = lb.querySelector("figcaption");
+    const lbStatus = lb.querySelector("[aria-live]");
     const btnClose = lb.querySelector(".lb-close");
     const btnPrev = lb.querySelector(".lb-prev");
     const btnNext = lb.querySelector(".lb-next");
@@ -155,6 +168,7 @@
       lbImg.src = img.full + ".jpg";
       lbImg.alt = img.alt;
       lbCap.textContent = img.alt;
+      lbStatus.textContent = "Bild " + (pos + 1) + " von " + images.length + ": " + img.alt;
     }
     function openLightbox(i) {
       lastFocus = document.activeElement;
@@ -177,6 +191,14 @@
       if (e.key === "Escape") close();
       else if (e.key === "ArrowLeft") show(pos - 1);
       else if (e.key === "ArrowRight") show(pos + 1);
+      else if (e.key === "Tab") {
+        /* Fokus innerhalb des Dialogs halten */
+        const f = [btnClose, btnPrev, btnNext];
+        const i = f.indexOf(document.activeElement);
+        const dir = e.shiftKey ? -1 : 1;
+        e.preventDefault();
+        f[i < 0 ? 0 : (i + dir + f.length) % f.length].focus();
+      }
     });
   }
 
@@ -209,10 +231,53 @@
   }
 
   /* ---------------------------------------------------------------
+     5) Scroll-Reveal (dezent) + Gästebuch-Stimmen-Teaser
+     --------------------------------------------------------------- */
+  function initReveal() {
+    const els = document.querySelectorAll(".reveal");
+    if (!els.length) return;
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      els.forEach(function (el) { el.classList.add("is-visible"); });
+      return;
+    }
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
+  function initStimmenTeaser() {
+    const wrap = document.querySelector("#stimmen-teaser");
+    if (!wrap) return;
+    fetch("guestbook.json", { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (entries) {
+        entries.sort(function (a, b) { return (b.iso || "").localeCompare(a.iso || ""); });
+        wrap.innerHTML = "";
+        entries.slice(0, 2).forEach(function (e) {
+          const t = e.text.length > 180 ? e.text.slice(0, 177).trim() + "…" : e.text;
+          const el = document.createElement("article");
+          el.className = "stimme";
+          el.innerHTML =
+            "<blockquote>" + escapeHTML(t) + "</blockquote>" +
+            '<p class="meta"><strong>' + escapeHTML(e.name) + "</strong> – " + escapeHTML(e.date) + "</p>";
+          wrap.appendChild(el);
+        });
+      })
+      .catch(function () {
+        wrap.innerHTML = '<p class="no-js-hinweis">Stimmen konnten nicht geladen werden.</p>';
+      });
+  }
+
+  /* ---------------------------------------------------------------
      Start
      --------------------------------------------------------------- */
   function boot() {
     initNav();
+    initReveal();
+    initStimmenTeaser();
     initGaestebuch();
 
     const needsImages = document.querySelector(".hero-slider, .galerie");
