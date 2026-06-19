@@ -10,4 +10,4 @@ Disallow: /
 #
 # User-agent: *
 # Allow: /
-# Sitemap: https://groschenopa.github.io/kasper/sitemap.xml
+# Sitemap: https://luxis-puppentheater.net/sitemap.xml

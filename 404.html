@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Seite nicht gefunden – Luxis Puppentheater</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" href="/kasper/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <!-- 404 ist selbsttragend gestaltet, damit sie auch bei tiefen URLs korrekt aussieht. -->
   <style>
     body{margin:0;min-height:100vh;display:grid;place-items:center;text-align:center;
@@ -22,13 +22,7 @@
   <div class="box">
     <h1>404</h1>
     <p>Hoppla – diese Seite hat sich hinter dem Vorhang versteckt.</p>
-    <a id="home" href="/kasper/">Zurück zur Startseite</a>
+    <a href="/">Zurück zur Startseite</a>
   </div>
-  <script>
-    // Auf eigener Domain (Root) statt im Projekt-Unterordner verlinken.
-    if (location.hostname.indexOf("github.io") === -1) {
-      document.getElementById("home").setAttribute("href", "/");
-    }
-  </script>
 </body>
 </html>

@@ -9,3 +9,6 @@ _shot-*.png
 
 # lokale Claude-Code-Konfiguration
 .claude/
+
+# Quell-Originale (nicht für die Live-Seite nötig)
+_originale/
