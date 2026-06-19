@@ -209,50 +209,39 @@ main { flex: 1 0 auto; }
   .nav-menu a[aria-current="page"]::after { display: none; }
 }
 
-/* ---------- Hero (hell, mit dekorativen Farbtupfern) ---------- */
-.hero { position: relative; overflow: hidden; padding-block: clamp(2.4rem, 1.5rem + 5vw, 5rem); }
-.hero::before, .hero::after {
-  content: ""; position: absolute; border-radius: 50%; filter: blur(8px); z-index: 0;
-  pointer-events: none;
+/* ---------- Hero (rote Bühne, Name prominent) ---------- */
+.hero {
+  position: relative; overflow: hidden;
+  background: var(--rot); color: #fff; text-align: center;
+  padding-top: clamp(2rem, 1.2rem + 4vw, 3.8rem);
+  padding-bottom: clamp(2.4rem, 1.5rem + 3vw, 4.2rem);
 }
-.hero::before { width: 46vw; height: 46vw; top: -16vw; right: -12vw;
-  background: radial-gradient(circle, rgba(252,168,74,0.30), transparent 65%); }
-.hero::after { width: 40vw; height: 40vw; bottom: -18vw; left: -14vw;
-  background: radial-gradient(circle, rgba(199,25,25,0.16), transparent 65%); }
-.hero-grid {
-  position: relative; z-index: 1;
-  display: grid; grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(1.5rem, 1rem + 3vw, 3.5rem); align-items: center;
+.hero-inner { position: relative; z-index: 1; max-width: 820px; margin-inline: auto; }
+.augenbraue--hell { color: var(--gelb); }
+.hero-name {
+  font-family: var(--font-headline); font-weight: 600; color: var(--gelb-hell);
+  font-size: clamp(2.7rem, 1.5rem + 6.5vw, 5.5rem);
+  line-height: 1.02; margin: 0.15rem 0 0.5rem;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.10);
 }
-.hero .motto {
-  font-family: var(--font-headline);
-  font-size: clamp(1.9rem, 1.2rem + 3vw, 3.2rem); font-weight: 500;
-  color: var(--rot); margin: 0 0 1rem; line-height: 1.15;
+.hero-motto {
+  font-family: var(--font-headline); font-weight: 500; color: #fff;
+  font-size: clamp(1.25rem, 0.95rem + 1.5vw, 1.9rem);
+  line-height: 1.2; margin: 0 auto 0.7rem; max-width: 26ch;
 }
-.hero p { color: var(--text-leise); font-size: 1.1rem; }
-.hero-cta { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.hero-intro { color: rgba(255, 255, 255, 0.9); margin: 0 auto 1.3rem; max-width: 54ch; }
+.hero-cta { margin-top: 1.3rem; display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
+.btn-ghost-hell { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.65); }
+.btn-ghost-hell:hover { background: rgba(255, 255, 255, 0.14); color: #fff; transform: translateY(-2px); }
 .hero-trust {
-  margin-top: 1.3rem; font-family: var(--font-akzent); font-size: 0.85rem;
-  color: var(--text-leise); display: flex; flex-wrap: wrap; gap: 0.3rem 1rem;
+  margin: 1.4rem auto 0; font-family: var(--font-akzent); font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85); display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 0.3rem 1.4rem;
 }
-
-/* rotierende Foto-Karte */
-.hero-slider {
-  position: relative; aspect-ratio: 4 / 5;
-  border-radius: var(--radius); overflow: hidden;
-  box-shadow: var(--schatten); background: var(--creme-tief);
-  border: 6px solid #fff; rotate: 1.4deg;
-}
-.hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease; }
-.hero-slide.active { opacity: 1; }
-.hero-slide img { width: 100%; height: 100%; object-fit: cover; }
-.hero-dots { position: absolute; bottom: 0.8rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.4rem; z-index: 2; }
-.hero-dots button { width: 11px; height: 11px; border-radius: 50%; border: 2px solid #fff; background: rgba(0,0,0,0.25); padding: 0; cursor: pointer; }
-.hero-dots button[aria-current="true"] { background: var(--gelb); border-color: var(--gelb); }
-
-@media (max-width: 820px) {
-  .hero-grid { grid-template-columns: 1fr; }
-  .hero-slider { max-width: 420px; margin-inline: auto; rotate: 0deg; }
+/* Bühnen-Bild: roter Bildgrund == Seiten-Rot (#c71919) -> nahtloser Übergang */
+.hero-buehne {
+  display: block; width: 100%; max-width: 1080px; height: auto;
+  margin: clamp(1.2rem, 0.6rem + 2vw, 2.4rem) auto 0;
 }
 
 /* ---------- Vertrauens-Strip ---------- */

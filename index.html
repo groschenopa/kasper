@@ -8,13 +8,13 @@
   <meta name="description" content="Luxis Puppentheater aus Lippstadt: fröhliches Puppenspiel mit Dresdner Künstlerpuppen und Trullala-Handpuppen – für Kindergeburtstage, Kindergärten, Seniorenheime und Feste.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <!-- LCP: erstes Hero-Bild vorab laden (entspricht dem statischen Slide unten) -->
-  <link rel="preload" as="image" href="assets/galerie/galerie-01.webp" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2">
+  <!-- LCP: Bühnen-Bild vorab laden -->
+  <link rel="preload" as="image" href="assets/bilder/hero.jpg" type="image/jpeg" fetchpriority="high">
   <meta property="og:title" content="Luxis Puppentheater">
   <meta property="og:description" content="Fantasie und Freude gehen beim Puppenspiel Hand in Hand.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/galerie/galerie-13.jpg">
+  <meta property="og:image" content="assets/bilder/hero.jpg">
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -38,34 +38,25 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text reveal">
-          <p class="augenbraue"><span aria-hidden="true">✨</span> Willkommen bei Luxi</p>
-          <p class="motto">Fantasie und Freude gehen beim Puppenspiel Hand in Hand.</p>
-          <p>Seit vielen Jahren verzaubert „Luxis Puppentheater“ im Raum Lippstadt
-             jung und alt – mit Kasper, Zauberer und vielen liebevollen Figuren.</p>
-          <div class="hero-cta">
-            <a class="btn btn-rot" href="#kontakt">Vorstellung anfragen</a>
-            <a class="btn btn-ghost" href="anlaesse.html">Anlässe entdecken</a>
-          </div>
-          <p class="hero-trust">
-            <span><span aria-hidden="true">⏳</span> Seit vielen Jahren</span>
-            <span><span aria-hidden="true">📍</span> Raum Lippstadt &amp; Umgebung</span>
-            <span><span aria-hidden="true">🎭</span> Für Groß &amp; Klein</span>
-          </p>
+      <div class="container hero-inner reveal">
+        <p class="augenbraue augenbraue--hell"><span aria-hidden="true">✨</span> Willkommen bei Luxi</p>
+        <h1 class="hero-name">Luxis Puppentheater</h1>
+        <p class="hero-motto">Fantasie und Freude gehen beim Puppenspiel Hand in Hand.</p>
+        <p class="hero-intro">Seit vielen Jahren verzaubert „Luxis Puppentheater“ im Raum Lippstadt
+           jung und alt – mit Kasper, Zauberer und vielen liebevollen Figuren.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#kontakt">Vorstellung anfragen</a>
+          <a class="btn btn-ghost-hell" href="anlaesse.html">Anlässe entdecken</a>
         </div>
-        <div class="hero-slider" role="group" aria-roledescription="Bildkarussell" aria-label="Bilder unserer Puppen">
-          <!-- Statischer erster Slide für sofortiges LCP; JS ersetzt ihn durch den Slider -->
-          <div class="hero-slide active">
-            <picture>
-              <source srcset="assets/galerie/galerie-01.webp" type="image/webp">
-              <img src="assets/galerie/galerie-01.jpg" width="1050" height="1400"
-                   fetchpriority="high" decoding="async"
-                   alt="Zwei Charakterpuppen – ein alter Mann mit weißem Haar und eine Hexe mit buntem Kopftuch.">
-            </picture>
-          </div>
-        </div>
+        <p class="hero-trust">
+          <span><span aria-hidden="true">🎪</span> Eigene Bühne inklusive</span>
+          <span><span aria-hidden="true">📍</span> Raum Lippstadt &amp; Umgebung</span>
+          <span><span aria-hidden="true">🎭</span> Für Groß &amp; Klein</span>
+        </p>
       </div>
+      <img class="hero-buehne" src="assets/bilder/hero.jpg" width="1366" height="689"
+           fetchpriority="high" decoding="async"
+           alt="Luxis Puppenbühne mit goldenem Vorhang und einer Kasperle-Handpuppe, umrahmt von bunten gemalten Bällen.">
     </section>
 
     <!-- Vertrauens-Strip -->
@@ -83,7 +74,7 @@
         <div class="section__head reveal">
           <p class="augenbraue">Für jeden Anlass</p>
           <h2>Wo Luxi auftritt</h2>
-          <p class="lead">Ob Geburtstag, Fest oder Besuch im Heim – wir bringen die Bühne mit.</p>
+          <p class="lead">Ob Geburtstag, Fest oder Besuch im Heim – ich bringe die Bühne mit.</p>
         </div>
         <div class="teaser-grid reveal">
           <div class="teaser-card"><div class="ic" aria-hidden="true">🎂</div><strong>Kindergeburtstage</strong></div>
@@ -104,7 +95,7 @@
       <div class="container">
         <div class="section__head reveal">
           <p class="augenbraue">Ein Blick hinter den Vorhang</p>
-          <h2>Unsere Puppen</h2>
+          <h2>Meine Puppen</h2>
           <p class="lead">Tippen Sie auf ein Foto, um es größer zu sehen.</p>
         </div>
         <div class="galerie reveal" aria-label="Fotogalerie">
@@ -117,7 +108,7 @@
     <section class="section section--soft">
       <div class="container">
         <div class="section__head reveal">
-          <p class="augenbraue">Stimmen unserer Gäste</p>
+          <p class="augenbraue">Stimmen meiner Gäste</p>
           <h2>Das sagen Besucher</h2>
         </div>
         <div class="stimmen reveal" id="stimmen-teaser">
@@ -164,6 +155,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js?v=2" defer></script>
 </body>
 </html>
