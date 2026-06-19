@@ -8,7 +8,7 @@
   <meta name="description" content="Luxis Puppentheater aus Lippstadt: fröhliches Puppenspiel mit Dresdner Künstlerpuppen und Trullala-Handpuppen – für Kindergeburtstage, Kindergärten, Seniorenheime und Feste.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="assets/css/styles.css?v=5">
+  <link rel="stylesheet" href="assets/css/styles.css?v=6">
   <!-- LCP: Bühnen-Bild vorab laden -->
   <link rel="preload" as="image" href="assets/bilder/hero.webp" type="image/webp" fetchpriority="high">
   <meta property="og:title" content="Luxis Puppentheater">
@@ -38,14 +38,19 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero">
+      <div class="hero-buehne-band">
+        <img class="hero-buehne" src="assets/bilder/hero.webp" width="1366" height="689"
+             fetchpriority="high" decoding="async"
+             alt="Luxis Puppenbühne mit goldenem Vorhang und einer Kasperle-Handpuppe, umrahmt von bunten gemalten Bällen.">
+      </div>
       <div class="container hero-inner reveal">
         <h1 class="hero-name">Luxis Puppentheater</h1>
         <p class="hero-motto">Fantasie und Freude gehen beim Puppenspiel Hand in Hand.</p>
         <p class="hero-intro">Seit vielen Jahren verzaubert „Luxis Puppentheater“ im Raum Lippstadt
            jung und alt – mit Kasper, Zauberer und vielen liebevollen Figuren.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#kontakt">Vorstellung anfragen</a>
-          <a class="btn btn-ghost-hell" href="anlaesse.html">Anlässe entdecken</a>
+          <a class="btn btn-rot" href="#kontakt">Vorstellung anfragen</a>
+          <a class="btn btn-ghost" href="anlaesse.html">Anlässe entdecken</a>
         </div>
         <p class="hero-trust">
           <span><span aria-hidden="true">🎪</span> Mit eigener Bühne</span>
@@ -53,9 +58,6 @@
           <span><span aria-hidden="true">🎭</span> Für Groß &amp; Klein</span>
         </p>
       </div>
-      <img class="hero-buehne" src="assets/bilder/hero.webp" width="1366" height="689"
-           fetchpriority="high" decoding="async"
-           alt="Luxis Puppenbühne mit goldenem Vorhang und einer Kasperle-Handpuppe, umrahmt von bunten gemalten Bällen.">
     </section>
 
     <!-- Vertrauens-Strip -->
@@ -153,6 +155,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=5" defer></script>
+  <script src="assets/js/main.js?v=6" defer></script>
 </body>
 </html>
