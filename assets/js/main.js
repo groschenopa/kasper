@@ -272,9 +272,19 @@
   }
 
   /* ---------------------------------------------------------------
+     Kopierschutz (nur Abschreckung – kein echter Schutz)
+     --------------------------------------------------------------- */
+  function initCopyschutz() {
+    ["contextmenu", "copy", "cut", "dragstart", "selectstart"].forEach(function (evt) {
+      document.addEventListener(evt, function (e) { e.preventDefault(); });
+    });
+  }
+
+  /* ---------------------------------------------------------------
      Start
      --------------------------------------------------------------- */
   function boot() {
+    initCopyschutz();
     initNav();
     initReveal();
     initStimmenTeaser();

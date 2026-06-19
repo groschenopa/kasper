@@ -57,9 +57,11 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  /* Kopierschutz (nur Abschreckung): Text-Markieren unterbinden */
+  -webkit-user-select: none; -ms-user-select: none; user-select: none;
 }
 
-img { max-width: 100%; height: auto; display: block; }
+img { max-width: 100%; height: auto; display: block; -webkit-user-drag: none; }
 
 a { color: var(--rot); text-decoration-thickness: 2px; text-underline-offset: 2px; }
 a:hover { color: var(--rot-dunkel); }
