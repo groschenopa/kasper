@@ -367,6 +367,8 @@ main { flex: 1 0 auto; }
 .site-footer { background: var(--blau-dunkel); color: rgba(255,255,255,0.92); margin-top: auto; padding-block: 2.2rem; }
 .footer-grid { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; list-style: none; margin: 0; padding: 0; }
+.site-footer a { color: var(--gelb); }
+.site-footer a:hover { color: #fff; }
 .footer-links a { color: var(--gelb); text-decoration: none; font-weight: 600; }
 .footer-links a:hover { text-decoration: underline; color: #fff; }
 .footer-brand { font-family: var(--font-headline); font-size: 1.35rem; color: #fff; }
