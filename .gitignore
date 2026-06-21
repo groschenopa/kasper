@@ -12,3 +12,7 @@ _shot-*.png
 
 # Quell-Originale (nicht für die Live-Seite nötig)
 _originale/
+
+# Text-Arbeitsdateien (Vorlage/Feedback für Luxi – nicht für die Live-Seite)
+assets/luxis-website-texte.md
+assets/neue-texte-feedback-luxi.md
