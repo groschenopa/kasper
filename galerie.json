@@ -1,146 +1,191 @@
 [
   {
-    "id": "galerie-01",
-    "full": "assets/galerie/galerie-01",
-    "thumb": "assets/galerie/galerie-01-thumb",
-    "alt": "Zwei Charakterpuppen – ein alter Mann mit weißem Haar und eine Hexe mit buntem Kopftuch.",
+    "id": "kasper-luxi-und-bella",
+    "full": "assets/galerie/kasper-luxi-und-bella",
+    "thumb": "assets/galerie/kasper-luxi-und-bella-thumb",
+    "alt": "Luxi mit den Handpuppen Kasper und Prinzessin Bella hinter ihrer Bühne im Freien.",
     "hero": true,
+    "w": 1400,
+    "h": 1354
+  },
+  {
+    "id": "kasper",
+    "full": "assets/galerie/kasper",
+    "thumb": "assets/galerie/kasper-thumb",
+    "alt": "Der Kasper – Junge mit roter Zipfelmütze, rot-blauer Jacke, gelber Hose und roten Schuhen.",
+    "hero": true,
+    "w": 907,
+    "h": 1400
+  },
+  {
+    "id": "prinzessin-bella",
+    "full": "assets/galerie/prinzessin-bella",
+    "thumb": "assets/galerie/prinzessin-bella-thumb",
+    "alt": "Prinzessin Bella mit pinkfarbenem Kleid, hochgestecktem blondem Haar und kleinem Krönchen.",
+    "hero": true,
+    "w": 865,
+    "h": 1341
+  },
+  {
+    "id": "zauberlehrling",
+    "full": "assets/galerie/zauberlehrling",
+    "thumb": "assets/galerie/zauberlehrling-thumb",
+    "alt": "Zauberlehrling mit schwarzem Spitzhut, langem weißem Bart und rotem Umhang, mit Zauberstab und roter Kristallkugel.",
+    "hero": true,
+    "w": 908,
+    "h": 1400
+  },
+  {
+    "id": "koenig-und-krone",
+    "full": "assets/galerie/koenig-und-krone",
+    "thumb": "assets/galerie/koenig-und-krone-thumb",
+    "alt": "König mit goldener Krone, weißem Bart und rotem Hermelinmantel, daneben eine prächtige funkelnde Krone.",
+    "hero": true,
+    "w": 1022,
+    "h": 1400
+  },
+  {
+    "id": "ritter-willibald",
+    "full": "assets/galerie/ritter-willibald",
+    "thumb": "assets/galerie/ritter-willibald-thumb",
+    "alt": "Gehäkelter Ritter Willibald in silberner Rüstung mit Helm und rot abgesetztem Wappenrock.",
+    "hero": false,
+    "w": 987,
+    "h": 1400
+  },
+  {
+    "id": "riese-mattheo",
+    "full": "assets/galerie/riese-mattheo",
+    "thumb": "assets/galerie/riese-mattheo-thumb",
+    "alt": "Riese Mattheo mit dunklem Vollbart, kariertem Hemd und Jeans mit Flicken an den Knien.",
+    "hero": false,
+    "w": 550,
+    "h": 1400
+  },
+  {
+    "id": "raeuber",
+    "full": "assets/galerie/raeuber",
+    "thumb": "assets/galerie/raeuber-thumb",
+    "alt": "Räuber mit dunklem Bart, Kopftuch und zerschlissener Kleidung mit rot-kariertem Halstuch.",
+    "hero": false,
+    "w": 904,
+    "h": 1400
+  },
+  {
+    "id": "gespenst-und-kasper",
+    "full": "assets/galerie/gespenst-und-kasper",
+    "thumb": "assets/galerie/gespenst-und-kasper-thumb",
+    "alt": "Ein weißes Gespenst mit wildem Haar und der Kasper-Junge Seite an Seite.",
+    "hero": false,
+    "w": 998,
+    "h": 1400
+  },
+  {
+    "id": "kleine-waldhexe",
+    "full": "assets/galerie/kleine-waldhexe",
+    "thumb": "assets/galerie/kleine-waldhexe-thumb",
+    "alt": "Kleine Waldhexe mit lila Spitzhut, rotem Wuschelhaar und Besen, in lila Rock und orangem Oberteil.",
+    "hero": false,
+    "w": 963,
+    "h": 1400
+  },
+  {
+    "id": "fee",
+    "full": "assets/galerie/fee",
+    "thumb": "assets/galerie/fee-thumb",
+    "alt": "Fee in weißem Glitzerkleid mit hohem Spitzhut und Schleier sowie goldenem Gürtel.",
+    "hero": false,
     "w": 1050,
     "h": 1400
   },
   {
-    "id": "galerie-02",
-    "full": "assets/galerie/galerie-02",
-    "thumb": "assets/galerie/galerie-02-thumb",
-    "alt": "Der alte Mann und die wild gelockte Hexe im Gespräch.",
+    "id": "mariposa",
+    "full": "assets/galerie/mariposa",
+    "thumb": "assets/galerie/mariposa-thumb",
+    "alt": "Gehäkelte Schmetterlingspuppe Mariposa mit Regenbogenkleid und bunten Flügeln.",
     "hero": false,
-    "w": 1400,
-    "h": 1050
+    "w": 857,
+    "h": 1400
   },
   {
-    "id": "galerie-03",
-    "full": "assets/galerie/galerie-03",
-    "thumb": "assets/galerie/galerie-03-thumb",
-    "alt": "Engelsfigur in weißem Gewand mit ausgebreiteten Armen.",
+    "id": "meerjungfrau-maila",
+    "full": "assets/galerie/meerjungfrau-maila-1",
+    "thumb": "assets/galerie/meerjungfrau-maila-1-thumb",
+    "alt": "Gehäkelte Meerjungfrau Maila mit langem türkisfarbenem Haar und blauer Flosse.",
     "hero": false,
-    "w": 960,
-    "h": 1280
+    "w": 858,
+    "h": 1400
   },
   {
-    "id": "galerie-04",
-    "full": "assets/galerie/galerie-04",
-    "thumb": "assets/galerie/galerie-04-thumb",
-    "alt": "Ein weißes Gespenst und ein Mann in brauner Kleidung.",
+    "id": "bluemchen",
+    "full": "assets/galerie/bluemchen",
+    "thumb": "assets/galerie/bluemchen-thumb",
+    "alt": "Gehäkeltes Blümchen – Puppe in grünem Kleid mit gelben Blütenblättern als Kranz um das Gesicht.",
     "hero": false,
-    "w": 1400,
-    "h": 1050
+    "w": 957,
+    "h": 1400
   },
   {
-    "id": "galerie-05",
-    "full": "assets/galerie/galerie-05",
-    "thumb": "assets/galerie/galerie-05-thumb",
-    "alt": "Weiße Märchenfigur mit Spitzhut.",
+    "id": "tilly-willy",
+    "full": "assets/galerie/tilly-willy",
+    "thumb": "assets/galerie/tilly-willy-thumb",
+    "alt": "Gehäkelte Figur Tilly-Willy mit rotem Mützchen, grünem Kleid mit Blättersaum und Eichel-Anhänger.",
     "hero": false,
-    "w": 853,
-    "h": 1280
+    "w": 1050,
+    "h": 1400
   },
   {
-    "id": "galerie-06",
-    "full": "assets/galerie/galerie-06",
-    "thumb": "assets/galerie/galerie-06-thumb",
-    "alt": "Mädchenpuppe im weißen Kleid vor herbstlicher Bühnenkulisse.",
+    "id": "valentina",
+    "full": "assets/galerie/valentina",
+    "thumb": "assets/galerie/valentina-thumb",
+    "alt": "Valentina mit rotgelocktem Haar, rot gepunkteter Bluse, blauem Schal und blauer Schlaghose.",
     "hero": false,
-    "w": 960,
-    "h": 1280
+    "w": 916,
+    "h": 1400
   },
   {
-    "id": "galerie-07",
-    "full": "assets/galerie/galerie-07",
-    "thumb": "assets/galerie/galerie-07-thumb",
-    "alt": "Der alte Mann und die Hexe stehen sich gegenüber.",
+    "id": "tim-und-fussball",
+    "full": "assets/galerie/tim-und-fussball",
+    "thumb": "assets/galerie/tim-und-fussball-thumb",
+    "alt": "Der Junge Tim in rotem Trikot und blauer Hose mit einem Fußball am Fuß.",
     "hero": false,
-    "w": 1400,
-    "h": 1050
+    "w": 1009,
+    "h": 1400
   },
   {
-    "id": "galerie-08",
-    "full": "assets/galerie/galerie-08",
-    "thumb": "assets/galerie/galerie-08-thumb",
-    "alt": "Zwei Handpuppen – ein Kapitän mit Mütze und ein Mann mit Hut.",
+    "id": "frau-tausendschoen-und-herr-zausel",
+    "full": "assets/galerie/frau-tausendschoen-und-herr-zausel",
+    "thumb": "assets/galerie/frau-tausendschoen-und-herr-zausel-thumb",
+    "alt": "Zwei flauschige Fellpuppen: die pinke Frau Tausendschön und der weiße, zottelige Herr Zausel.",
     "hero": false,
-    "w": 853,
-    "h": 1280
+    "w": 1334,
+    "h": 1400
   },
   {
-    "id": "galerie-09",
-    "full": "assets/galerie/galerie-09",
-    "thumb": "assets/galerie/galerie-09-thumb",
-    "alt": "Freundliche Hexe mit lila Spitzhut und buntem Flickenkleid.",
-    "hero": true,
-    "w": 960,
-    "h": 1280
-  },
-  {
-    "id": "galerie-10",
-    "full": "assets/galerie/galerie-10",
-    "thumb": "assets/galerie/galerie-10-thumb",
-    "alt": "Prinzessin mit grünem Spitzhut und lila Kleid.",
-    "hero": true,
-    "w": 960,
-    "h": 1280
-  },
-  {
-    "id": "galerie-11",
-    "full": "assets/galerie/galerie-11",
-    "thumb": "assets/galerie/galerie-11-thumb",
-    "alt": "Zauberer mit schwarzem Spitzhut und rotem Umhang.",
-    "hero": true,
-    "w": 960,
-    "h": 1280
-  },
-  {
-    "id": "galerie-12",
-    "full": "assets/galerie/galerie-12",
-    "thumb": "assets/galerie/galerie-12-thumb",
-    "alt": "Zauberer mit Zauberstab und leuchtender Kristallkugel.",
-    "hero": true,
-    "w": 853,
-    "h": 1280
-  },
-  {
-    "id": "galerie-13",
-    "full": "assets/galerie/galerie-13",
-    "thumb": "assets/galerie/galerie-13-thumb",
-    "alt": "Prinzessin und Kasperle mit einer lachenden Blume.",
-    "hero": true,
-    "w": 946,
-    "h": 1280
-  },
-  {
-    "id": "galerie-14",
-    "full": "assets/galerie/galerie-14",
-    "thumb": "assets/galerie/galerie-14-thumb",
-    "alt": "Kasperle-Junge in roter Kleidung.",
+    "id": "frau-gloeckchen-und-herr-fliegenpilz",
+    "full": "assets/galerie/frau-gloeckchen-und-herr-fliegenpilz",
+    "thumb": "assets/galerie/frau-gloeckchen-und-herr-fliegenpilz-thumb",
+    "alt": "Frau Glöckchen mit roter Blütenmütze in Grün und Herr Fliegenpilz mit rot-weiß getupftem Pilzhut.",
     "hero": false,
-    "w": 853,
-    "h": 1280
+    "w": 1140,
+    "h": 1400
   },
   {
-    "id": "galerie-15",
-    "full": "assets/galerie/galerie-15",
-    "thumb": "assets/galerie/galerie-15-thumb",
-    "alt": "Ein Mädchen im roten Kleid und eine Großmutter.",
+    "id": "lari-und-fari",
+    "full": "assets/galerie/lari-und-fari-portraet-1",
+    "thumb": "assets/galerie/lari-und-fari-portraet-1-thumb",
+    "alt": "Lari und Fari – zwei Puppen mit grünen Struwwelhaaren und bunten Hemden, eng beieinander.",
     "hero": false,
-    "w": 1362,
-    "h": 1199
+    "w": 816,
+    "h": 1166
   },
   {
-    "id": "galerie-16",
-    "full": "assets/galerie/galerie-16",
-    "thumb": "assets/galerie/galerie-16-thumb",
-    "alt": "Puppe im Trachtenkleid auf der Theaterbühne.",
+    "id": "baum",
+    "full": "assets/galerie/baum",
+    "thumb": "assets/galerie/baum-thumb",
+    "alt": "Sprechender Baum als Handpuppe mit freundlichem Gesicht, brauner Rinde und grünen Blättern an den Ästen.",
     "hero": false,
-    "w": 880,
-    "h": 1280
+    "w": 986,
+    "h": 1400
   }
 ]
