@@ -130,14 +130,44 @@
     }
 
     grid.innerHTML = "";
+    if (!grid.id) grid.id = "galerie-grid";
+    const teaser = parseInt(grid.getAttribute("data-teaser"), 10) || 0;
+    const thumbs = [];
     images.forEach(function (img, idx) {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.setAttribute("aria-label", "Foto vergrößern: " + img.alt);
       btn.innerHTML = pictureHTML(img.thumb, img.alt, null);
       btn.addEventListener("click", function () { openLightbox(idx); });
+      if (teaser && idx >= teaser) btn.hidden = true;
       grid.appendChild(btn);
+      thumbs.push(btn);
     });
+
+    /* Teaser: restliche Bilder erst auf Klick aufklappen (Lightbox bleibt über alle Bilder) */
+    if (teaser && images.length > teaser) {
+      const wrap = document.createElement("p");
+      wrap.className = "text-center galerie-mehr";
+      const toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "btn btn-ghost";
+      toggle.setAttribute("aria-controls", grid.id);
+      toggle.setAttribute("aria-expanded", "false");
+      function setLabel(open) {
+        toggle.innerHTML =
+          (open ? "Weniger anzeigen" : "Alle " + images.length + " Bilder ansehen") +
+          ' <span aria-hidden="true">' + (open ? "▴" : "▾") + "</span>";
+      }
+      setLabel(false);
+      toggle.addEventListener("click", function () {
+        const open = toggle.getAttribute("aria-expanded") !== "true";
+        thumbs.forEach(function (b, i) { if (i >= teaser) b.hidden = !open; });
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        setLabel(open);
+      });
+      wrap.appendChild(toggle);
+      grid.insertAdjacentElement("afterend", wrap);
+    }
 
     /* Lightbox-Gerüst einmalig erzeugen */
     const lb = document.createElement("div");
