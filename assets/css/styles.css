@@ -253,6 +253,10 @@ main { flex: 1 0 auto; }
 .trust .ic { font-size: 1.3rem; line-height: 1; }
 .trust ul { display: contents; margin: 0; padding: 0; }
 
+/* Engagement-Streifen ("Mit Herz dabei") */
+.herz-label { display: block; text-align: center; margin-top: 1.5rem; }
+.trust--herz { margin-top: 0.2rem; background: var(--creme-tief); border-color: rgba(199, 25, 25, 0.14); }
+
 /* ---------- Anlässe-Teaser (Startseite) ---------- */
 .teaser-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
