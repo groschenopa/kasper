@@ -130,42 +130,29 @@
     }
 
     grid.innerHTML = "";
-    if (!grid.id) grid.id = "galerie-grid";
     const teaser = parseInt(grid.getAttribute("data-teaser"), 10) || 0;
-    const thumbs = [];
+    const shown = teaser ? Math.min(teaser, images.length) : images.length;
     images.forEach(function (img, idx) {
+      if (idx >= shown) return;            // auf der Startseite nur die Teaser-Anzahl zeigen
       const btn = document.createElement("button");
       btn.type = "button";
       btn.setAttribute("aria-label", "Foto vergrößern: " + img.alt);
       btn.innerHTML = pictureHTML(img.thumb, img.alt, null);
       btn.addEventListener("click", function () { openLightbox(idx); });
-      if (teaser && idx >= teaser) btn.hidden = true;
       grid.appendChild(btn);
-      thumbs.push(btn);
     });
 
-    /* Teaser: restliche Bilder erst auf Klick aufklappen (Lightbox bleibt über alle Bilder) */
+    /* Mehr Bilder vorhanden als gezeigt: Button öffnet direkt die Lightbox über ALLE Bilder */
     if (teaser && images.length > teaser) {
       const wrap = document.createElement("p");
       wrap.className = "text-center galerie-mehr";
-      const toggle = document.createElement("button");
-      toggle.type = "button";
-      toggle.className = "btn btn-ghost";
-      toggle.setAttribute("aria-controls", grid.id);
-      toggle.setAttribute("aria-expanded", "false");
-      function setLabel(open) {
-        toggle.innerHTML =
-          (open ? "Weniger anzeigen" : "Alle " + images.length + " Bilder ansehen") +
-          ' <span aria-hidden="true">' + (open ? "▴" : "▾") + "</span>";
-      }
-      setLabel(false);
-      toggle.addEventListener("click", function () {
-        const open = toggle.getAttribute("aria-expanded") !== "true";
-        thumbs.forEach(function (b, i) { if (i >= teaser) b.hidden = !open; });
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-        setLabel(open);
-      });
-      wrap.appendChild(toggle);
+      const more = document.createElement("button");
+      more.type = "button";
+      more.className = "btn btn-ghost";
+      more.setAttribute("aria-haspopup", "dialog");
+      more.textContent = "Alle " + images.length + " Bilder ansehen";
+      more.addEventListener("click", function () { openLightbox(0); });
+      wrap.appendChild(more);
       grid.insertAdjacentElement("afterend", wrap);
     }
 
