@@ -346,6 +346,7 @@ main { flex: 1 0 auto; }
 .eintrag blockquote { margin: 0 0 0.6rem; font-size: 1.06rem; }
 .eintrag .meta { font-family: var(--font-akzent); color: var(--text-leise); font-size: 0.9rem; }
 .eintrag .meta strong { color: var(--rot); font-weight: 400; }
+.eintrag-bild { display: block; width: 100%; max-width: 480px; height: auto; border-radius: var(--radius); box-shadow: var(--schatten-klein); margin: 0.2rem 0 0.9rem; }
 
 /* ---------- Kontakt-CTA-Band (das bewusste Rot-Highlight) ---------- */
 .kontakt {

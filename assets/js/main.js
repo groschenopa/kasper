@@ -232,11 +232,14 @@
         wrap.innerHTML = "";
         entries.forEach(function (e) {
           const el = document.createElement("article");
-          el.className = "eintrag";
-          el.innerHTML =
-            "<blockquote>" + escapeHTML(e.text) + "</blockquote>" +
+          el.className = "eintrag" + (e.image ? " eintrag-foto" : "");
+          let html = "";
+          if (e.image) html += pictureHTML(e.image, e.imageAlt || "", "eintrag-bild");
+          if (e.text) html += "<blockquote>" + escapeHTML(e.text) + "</blockquote>";
+          html +=
             '<p class="meta"><strong>' + escapeHTML(e.name) + "</strong> – " +
             escapeHTML(e.date) + "</p>";
+          el.innerHTML = html;
           wrap.appendChild(el);
         });
       })

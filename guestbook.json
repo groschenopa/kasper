@@ -1,5 +1,12 @@
 [
   {
+    "name": "Elisa (6 Jahre)",
+    "date": "26. Mai 2026",
+    "iso": "2026-05-26",
+    "image": "assets/bilder/gaestebuch-postkarte",
+    "imageAlt": "Foto einer handgeschriebenen Postkarte von Elisa (6 Jahre): „Hallo Kasper, liebe Grüße von der Nordsee sendet dir Elisa.“"
+  },
+  {
     "name": "Jennifer",
     "date": "17. Mai 2026",
     "iso": "2026-05-17",
